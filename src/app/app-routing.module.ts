@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'hafflepuff',
     loadChildren: () => import('./hafflepuff/hafflepuff.module').then( m => m.HafflepuffPageModule)
   },
+  {
+    path: 'detalles',
+    loadChildren: () => import('./detalles/detalles.module').then( m => m.DetallesPageModule)
+  },
 ];
 
 @NgModule({
