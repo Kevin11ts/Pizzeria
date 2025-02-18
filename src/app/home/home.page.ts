@@ -15,23 +15,26 @@ export class HomePage {
   ngOnInit() {
     console.log('Home: OnInit');
   }
+
   ionViewWillEnter() {
     console.log('Home: ionViewWillEnter');
-    this.totalPedidos
-     = this.pizzeria.getTotalPedidos();
+    // Actualiza el total de pedidos cuando se ingresa a la vista
+    this.totalPedidos = this.pizzeria.getTotalPedidos();
   }
 
   ionViewDidEnter() {
     console.log('Home: ionViewDidEnter');
   }
-  
+
   ionViewWillLeave() {
     console.log('Home: ionViewWillLeave');
   }
+
   ionViewDidLeave() {
     console.log('Home: ionViewDidLeave');
   }
-  ngOnDestry() {
-    console.log('Homa: OnDestroy');
+
+  ngOnDestroy() {
+    console.log('Home: OnDestroy');
   }
 }

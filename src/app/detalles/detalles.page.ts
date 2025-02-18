@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Pedido, PizzeriaService } from '../pizzeria.service';
 
 @Component({
   selector: 'app-detalles',
@@ -7,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   standalone: false
 })
 export class DetallesPage implements OnInit {
+  pedidos: Pedido[] = [];
 
-  constructor() { }
+  constructor(private pizzeria: PizzeriaService) { }
 
   ngOnInit() {
+    this.pedidos = this.pizzeria.getPedidosTotales();
   }
-
 }

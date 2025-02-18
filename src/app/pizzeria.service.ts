@@ -20,6 +20,10 @@ export class PizzeriaService {
   getPedidos(casa: string): Pedido[] {
     return this.pedidos.filter(pedido => pedido.casa === casa);
   }
+
+  getPedidosTotales(): Pedido[] {
+    return this.pedidos;
+  }
 }
 
 export interface Pedido {

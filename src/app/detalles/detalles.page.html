@@ -1,13 +1,19 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>detalles</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles de Pedidos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">detalles</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-list>
+    <ion-item *ngFor="let pedido of pedidos">
+      <ion-label>
+        <h2>{{ pedido.pizza }}</h2>
+        <p>Casa: {{ pedido.casa }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
