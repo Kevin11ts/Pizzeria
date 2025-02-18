@@ -11,6 +11,34 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'productos',
+    loadChildren: () => import('./productos/productos.module').then( m => m.ProductosPageModule)
+  },
+  {
+    path: 'page2',
+    loadChildren: () => import('./page2/page2.module').then( m => m.Page2PageModule)
+  },
+  {
+    path: 'page3',
+    loadChildren: () => import('./page3/page3.module').then( m => m.Page3PageModule)
+  },
+  {
+    path: 'gryffinder',
+    loadChildren: () => import('./gryffinder/gryffinder.module').then( m => m.GryffinderPageModule)
+  },
+  {
+    path: 'slytherin',
+    loadChildren: () => import('./slytherin/slytherin.module').then( m => m.SlytherinPageModule)
+  },
+  {
+    path: 'ravenclaw',
+    loadChildren: () => import('./ravenclaw/ravenclaw.module').then( m => m.RavenclawPageModule)
+  },
+  {
+    path: 'hafflepuff',
+    loadChildren: () => import('./hafflepuff/hafflepuff.module').then( m => m.HafflepuffPageModule)
+  },
 ];
 
 @NgModule({
